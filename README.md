@@ -21,15 +21,3 @@ In this project you will have a boilerplate code with a REST Api already setup t
 What problem will you solve implementing this private Blockchain application?
 Your employer is trying to make a test of concept on how a Blockchain application can be implemented in his company. He is an astronomy fans and he spend most of his free time on searching stars in the sky, that's why he would like to create a test application that will allows him to register stars, and also some others of his friends can register stars too but making sure the application know who owned each star.
 
-What is the process describe by the employer to be implemented in the application?
-The application will create a Genesis Block when we run the application.
-The user will request the application to send a message to be signed using a Wallet and in this way verify the ownership over the wallet address. The message format will be: <WALLET_ADRESS>:${new Date().getTime().toString().slice(0,-3)}:starRegistry;
-Once the user have the message the user can use a Wallet to sign the message.
-The user will try to submit the Star object for that it will submit: wallet address, message, signature and the star object with the star information. The Start information will be formed in this format:
-    "star": {
-        "dec": "68° 52' 56.9",
-        "ra": "16h 29m 1.0s",
-        "story": "Testing the story 4"
-	}
-The application will verify if the time elapsed from the request ownership (the time is contained in the message) and the time when you submit the star is less than 5 minutes.
-If everything is okay the star information will be stored in the block and added to the chain
